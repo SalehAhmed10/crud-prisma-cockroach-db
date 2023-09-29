@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/api/v1/users", async (req, res) => {
+app.get("/users", async (req, res) => {
   // get the bookmark from db
   const users = await prisma.user.findMany();
   console.log(users);
@@ -40,7 +40,7 @@ app.get("/api/v1/users", async (req, res) => {
   });
 });
 
-app.post("/api/v1/users", async (req, res) => {
+app.post("/users", async (req, res) => {
   // make sure to use app.use(express.json)
   //   const name = req.body.name;
   const { name, bookmark } = req.body;
@@ -72,7 +72,7 @@ app.post("/api/v1/users", async (req, res) => {
 
 // get bookmark by id
 
-app.get("/api/v1/users/:bookmarkId", async (req, res) => {
+app.get("/users/:bookmarkId", async (req, res) => {
   const { bookmarkId } = req.params;
 
   try {
@@ -105,7 +105,7 @@ app.get("/api/v1/users/:bookmarkId", async (req, res) => {
 });
 
 // Delete by Id
-app.delete("/api/v1/users/:bookmarkId", async (req, res) => {
+app.delete("/users/:bookmarkId", async (req, res) => {
   const { bookmarkId } = req.params;
 
   try {
@@ -151,7 +151,7 @@ app.delete("/api/v1/users/:bookmarkId", async (req, res) => {
 });
 
 // Patch By Id
-app.patch("/api/v1/users/:bookmarkId", async (req, res) => {
+app.patch("/users/:bookmarkId", async (req, res) => {
   const { bookmarkId } = req.params;
 
   const { name, bookmark } = req.body;
