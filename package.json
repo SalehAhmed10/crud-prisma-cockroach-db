@@ -10,8 +10,7 @@
   },
   "scripts": {
       "start": "node index.js",
-      "dev": "nodemon index.js",
-      "vercel-build": "echo 'vercel-build'"
+      "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
