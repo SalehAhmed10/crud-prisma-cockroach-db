@@ -8,10 +8,10 @@
   "engines": {
     "node": "18.x"
   },
+
   "scripts": {
-      "start": "node index.js",
-      "dev": "nodemon index.js",
-      "vercel-build": "echo 'vercel-build'"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
